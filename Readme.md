@@ -34,7 +34,7 @@ This repository is based on the [v86 project](https://github.com/copy/v86).
 
 2. **Run the Build Script**  
   This step creates a filesystem that will load the server at boot and the CLI in ttys0.
-  Switch to the src directory:  
+   Switch to the src directory:  
    ```bash
    cd src
    ```
@@ -42,7 +42,7 @@ This repository is based on the [v86 project](https://github.com/copy/v86).
     ```bash
     ./build.sh
     ```
-  The filesystem will be saved at the fs directory.
+    The filesystem will be saved at the fs directory.
 
 3. **Open the Image Creator Tool**
   - Open image_creator.html in your browser. 
