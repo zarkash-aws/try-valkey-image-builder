@@ -12,29 +12,29 @@ This repository is based on the [v86 project](https://github.com/copy/v86).
 1. **Install Docker**: Follow the [Docker installation guide for macOS](https://docs.docker.com/desktop/setup/install/mac-install/).  
 2. **Start Docker**: Open the Docker application.  
 3. **Login to Docker**:  
-   - Open your terminal and run:  
-     ```bash
-     docker login -u <your-username>
-     ```  
-   - Enter your password when prompted.  
+  - Open your terminal and run:  
+    ```bash
+    docker login -u <your-username>
+    ```  
+  - Enter your password when prompted.  
 
 ---
 
 ## Steps to Create and Customize an Image  
 
 1. **Update the Version in the Dockerfile**  
-   Ensure the version in `src/Dockerfile` matches the desired version of Valkey.
-   - change VALKEY_VERSION, VALKEY_DOWNLOAD_URL,VALKEY_DOWNLOAD_SHA to your desired version. 
-      ```bash
-      ENV VALKEY_VERSION 8.0.1
-      ENV VALKEY_DOWNLOAD_URL https://github.com/valkey-io/valkey/archive/refs/tags/8.0.1.tar.gz
-      ENV VALKEY_DOWNLOAD_SHA 1e1d6dfbed2f932a87afbc7402be050a73974a9b19a9116897e537a6638e5e1d
-      ```
-   - for VALKEY_DOWNLOAD_URL and VALKEY_DOWNLOAD_SHA, look at the [hashes file](https://github.com/valkey-io/valkey-hashes). 
+  Ensure the version in `src/Dockerfile` matches the desired version of Valkey.
+  - change VALKEY_VERSION, VALKEY_DOWNLOAD_URL,VALKEY_DOWNLOAD_SHA to your desired version. 
+    ```bash
+    ENV VALKEY_VERSION 8.0.1
+    ENV VALKEY_DOWNLOAD_URL https://github.com/valkey-io/valkey/archive/refs/tags/8.0.1.tar.gz
+    ENV VALKEY_DOWNLOAD_SHA 1e1d6dfbed2f932a87afbc7402be050a73974a9b19a9116897e537a6638e5e1d
+    ```
+  - for VALKEY_DOWNLOAD_URL and VALKEY_DOWNLOAD_SHA, look at the [hashes file](https://github.com/valkey-io/valkey-hashes). 
 
 2. **Run the Build Script**  
   This step creates a filesystem that will load the server at boot and the CLI in ttys0.
-   Switch to the src directory:  
+  Switch to the src directory:  
    ```bash
    cd src
    ```
