@@ -56,6 +56,3 @@ This repository is based on the [v86 project](https://github.com/copy/v86).
     gzip <state_file_name>
     ```
     This step ensures the file is compatible with the "Try Valkey" page.
-
-### Additional Notes
-- this basic image supports only one 
