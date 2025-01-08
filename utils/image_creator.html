@@ -6,12 +6,12 @@
     <title>TryValkey</title>
 
     <!-- Scripts -->
-    <script src="browser_files/libv86.js"></script>
-    <script src="browser_files/xterm.min.js"></script>
-    <script src="browser_files/pako.min.js"></script>
-    <script src="browser_files/serial_xterm.js"></script>
+    <script src="../vos/v86/libv86.js"></script>
+    <script src="../vos/xterm/xterm.min.js"></script>
+    <script src="../vos/pako/pako.min.js"></script>
+    <script src="../vos/v86/serial_xterm.js"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="browser_files/xterm.css" />
+    <link rel="stylesheet" href="../vos/xterm/xterm.css" />
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open Sans'>
     
     <style>
@@ -231,13 +231,13 @@
             progressText.innerText = "Starting emulator...";
 
             emulator = new V86({
-                wasm_path: "browser_files/v86.wasm",
+                wasm_path: "../vos/v86/v86.wasm",
                 memory_size: 512 * 1024 * 1024,
                 vga_memory_size: 0,
-                bios: { url: "bios/seabios.bin" },
+                bios: { url: "../vos/v86/bios/seabios.bin" },
                 filesystem: {
-                    baseurl: "fs/alpine-rootfs-flat",
-                    basefs: "fs/alpine-fs.json",
+                    baseurl: "../fs/alpine-rootfs-flat",
+                    basefs: "../fs/alpine-fs.json",
                 },
                 autostart: true,
                 bzimage_initrd_from_filesystem: true,

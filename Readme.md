@@ -1,6 +1,7 @@
 # Try-Valkey Image Creation Repository
 
-This repository provides tools and instructions to create custom images for the **Try-Valkey** project. The images include the Valkey server and CLI, prepared for booting with all necessary configurations.  
+This repository provides tools and instructions to create custom images for the [Try-Valkey](https://zarkash-aws.github.io/try-valkey.github.io) project. 
+The images include the Valkey server and CLI, prepared for booting with all necessary configurations.
 
 This repository is based on the [v86 project](https://github.com/copy/v86).  
 
@@ -47,7 +48,7 @@ This repository is based on the [v86 project](https://github.com/copy/v86).
 3. **Open the Image Creator Tool**
   - Open image_creator.html in your browser. 
   - Wait for the boot process to complete. You'll know it's finished when you see data printed in the server log.
-  - Make any desired changes to the image. For example, you can load keys to the server at this stage, or make any modifications to the state.
+  - Make any desired changes to the image. For example, you can load keys to the server at this stage, or make any modifications to the state. You can edit the image state both through the cli and directly through the VM terminal. 
   - Once the image is in the desired state, click "Save State". This will download a binary file of the current state.
 
 4. **Compress the Binary File**
@@ -55,3 +56,6 @@ This repository is based on the [v86 project](https://github.com/copy/v86).
     gzip <state_file_name>
     ```
     This step ensures the file is compatible with the "Try Valkey" page.
+
+### Additional Notes
+- this basic image supports only one 
