@@ -4,11 +4,11 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 IMAGES=../fs
-OUT_ROOTFS_TAR="$IMAGES"/alpine-rootfs-new.tar
-OUT_ROOTFS_FLAT="$IMAGES"/alpine-rootfs-flat-new
-OUT_FSJSON="$IMAGES"/alpine-fs-new.json
-CONTAINER_NAME=alpine-v86-new
-IMAGE_NAME=i386/alpine-v86-new
+OUT_ROOTFS_TAR="$IMAGES"/alpine-rootfs.tar
+OUT_ROOTFS_FLAT="$IMAGES"/alpine-rootfs-flat
+OUT_FSJSON="$IMAGES"/alpine-fs.json
+CONTAINER_NAME=alpine-v86
+IMAGE_NAME=i386/alpine-v86
 
 mkdir -p "$IMAGES"
 docker build . --platform linux/386 --rm --tag "$IMAGE_NAME"
